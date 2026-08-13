@@ -1,0 +1,26 @@
+# Manifest of Backstage community plugins to export as RHDH dynamic plugins.
+#
+# When this file changes, the pipeline automatically:
+#   1. Clones the community plugin source from backstage/community-plugins
+#   2. Builds it (yarn install + build:all)
+#   3. Exports as a dynamic plugin (RHDH CLI plugin export)
+#   4. Packages as an OCI image and pushes to the registry
+#   5. Updates dynamic-plugins.yaml in the platform repo
+#   6. ArgoCD syncs -> RHDH restarts with the new plugin
+#
+# Fields:
+#   name:       workspace folder name under plugins/ in the community workspace
+#   workspace:  folder under workspaces/ in backstage/community-plugins
+#   image:      target OCI image (must be a public repo on quay.io)
+#   type:       frontend | backend
+
+plugins:
+  - name: todo
+    workspace: todo
+    image: quay.io/edubois10/rhdh-plugin-todo
+    type: frontend
+
+  - name: todo-backend
+    workspace: todo
+    image: quay.io/edubois10/rhdh-plugin-todo-backend
+    type: backend
