@@ -1,4 +1,4 @@
-# Manifest of Backstage community plugins to export as RHDH dynamic plugins.
+# Manifest of Backstage community plugins to export as RHDH dynamic plugins. 
 #
 # When this file changes, the pipeline automatically:
 #   1. Clones the community plugin source from backstage/community-plugins
