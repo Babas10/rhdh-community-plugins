@@ -12,7 +12,7 @@
 #   name:       workspace folder name under plugins/ in the community workspace
 #   workspace:  folder under workspaces/ in backstage/community-plugins
 #   image:      target OCI image (must be a public repo on quay.io)
-#   type:       frontend | backend
+#   type:       frontend | backend 
 
 plugins:
   - name: todo
